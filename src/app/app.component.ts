@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Java23190130';
+  title = 'MyTitle';
+  isEnabled: boolean = false;
+  email = '';
+  names = ['Vasya','Petya','Vova'];
+
+  // changeText(event: Event) {
+  //   console.log((<HTMLInputElement>event.target).value);
+  //   let element: HTMLInputElement = <HTMLInputElement>event.target;
+  //   this.isEnabled = element.value.length >= 3;
+  // }
+
+
+  changeText(value: string) {
+    this.isEnabled = value.length >= 3;
+  }
+
+  setTitle(value: string) {
+    this.title = value;
+  }
 }
